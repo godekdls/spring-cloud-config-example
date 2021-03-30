@@ -1,14 +1,20 @@
 # spring-cloud-config-example
 
-> 서버측 [keystore](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-server-sample/src/main/resources/config-server.jks) 생성 명령어
+> 디렉토리 구성<br>
+> -- spring-cloud-config-example<br>
+> ---- [config-repo-sample](https://github.com/godekdls/spring-cloud-config-example/tree/main/config-repo-sample) : 설정 정보 보관용 레포지토리<br>
+> ---- [config-server-sample](https://github.com/godekdls/spring-cloud-config-example/tree/main/config-server-sample) : 스프링 클라우드 컨피그 서버 어플리케이션<br>
+> ---- [config-client-sample](https://github.com/godekdls/spring-cloud-config-example/tree/main/config-client-sample) : 스프링 클라우드 컨피그 클라이언트 어플리케이션<br>
 
-```sh
-keytool -genkeypair -alias config-server-key \
-       -keyalg RSA -keysize 4096 -sigalg SHA512withRSA \
-       -dname 'CN=Config Server,OU=Spring Cloud,O=godekdls' \
-       -keypass torytoto -keystore config-server.jks \
-       -storepass torytoto
-```
+> 서버측 [keystore](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-server-sample/src/main/resources/config-server.jks) 생성 명령어
+> 
+> ```sh
+> keytool -genkeypair -alias config-server-key \
+>        -keyalg RSA -keysize 4096 -sigalg SHA512withRSA \
+>        -dname 'CN=Config Server,OU=Spring Cloud,O=godekdls' \
+>        -keypass torytoto -keystore config-server.jks \
+>        -storepass torytoto
+> ```
 
 > 암호화 설정 예시
 > [my.secret](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-repo-sample/sample-dev.properties#L4)
