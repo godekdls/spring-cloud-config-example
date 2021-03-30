@@ -1,0 +1,6 @@
+encrypt:
+  keyStore:
+    location: classpath:/config-server.jks
+    password: torytoto
+    alias: config-server-key
+    secret: torytoto
