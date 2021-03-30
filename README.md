@@ -1,6 +1,6 @@
 # spring-cloud-config-example
 
-> 서버측 keystore 생성 명령어
+> 서버측 [keystore](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-server-sample/src/main/resources/config-server.jks) 생성 명령어
 
 ```sh
 keytool -genkeypair -alias config-server-key \
