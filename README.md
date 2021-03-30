@@ -10,6 +10,9 @@ keytool -genkeypair -alias config-server-key \
        -storepass torytoto
 ```
 
+> 암호화 설정 예시
+> [my.secret](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-repo-sample/sample-dev.properties#L4)
+
 ## 컨피그 서버 실행하기
 
 ```sh
