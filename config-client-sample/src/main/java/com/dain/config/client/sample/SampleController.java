@@ -16,6 +16,15 @@ public class SampleController {
     @Value("${my.secret}")
     private String secret;
 
+    @Value("${friend}")
+    private String friend;
+
+    @Value("${app.friend:${friend}}")
+    private String appFriend;
+
+    @Value("${app.enemy}")
+    private String appEnemy;
+
     @GetMapping("/foo")
     public String foo() {
         return foo;
@@ -29,5 +38,20 @@ public class SampleController {
     @GetMapping("/secret")
     public String secret() {
         return secret;
+    }
+
+    @GetMapping("/friend")
+    public String friend() {
+        return friend;
+    }
+
+    @GetMapping("/app.friend")
+    public String appFriend() {
+        return appFriend;
+    }
+
+    @GetMapping("/app.enemy")
+    public String appEnemy() {
+        return appEnemy;
     }
 }

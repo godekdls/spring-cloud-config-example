@@ -23,7 +23,6 @@
 
 ```sh
 $ cd config-server-sample
-$ ./mvnw clean package -Dmaven.test.skip=true
 $ ./mvnw spring-boot:run
 ```
 
@@ -47,8 +46,13 @@ $ curl http://localhost:8888/sample/dev/nginx.conf?useDefaultLabel
 
 ```sh
 $ cd config-client-sample
-$ ./mvnw clean package -Dmaven.test.skip=true
 $ ./mvnw spring-boot:run
+```
+
+[`spring.cloud.config.overrideNone=true`](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-repo-sample/application.properties#L2) 설정 후 컨피그 서버의 overrides 프로퍼티를 재정의하고 싶으면
+
+```shell
+$ ./mvnw spring-boot:run -Dspring-boot.run.jvmArguments="-Dfriend=hi"
 ```
 
 ### 컨피그 클라이언트 설정 정보 확인하기
@@ -58,4 +62,7 @@ $ curl http://localhost:8080/actuator/env
 $ curl http://localhost:8080/foo
 $ curl http://localhost:8080/message
 $ curl http://localhost:8080/secret
+$ curl http://localhost:8080/friend
+$ curl http://localhost:8080/app.friend
+$ curl http://localhost:8080/app.enemy
 ```
