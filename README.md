@@ -49,7 +49,7 @@ $ cd config-client-sample
 $ ./mvnw spring-boot:run
 ```
 
-[`spring.cloud.config.overrideNone=true`](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-repo-sample/application.properties#L2) 설정 후 컨피그 서버의 overrides 프로퍼티를 재정의하고 싶으면
+[`spring.cloud.config.overrideNone=true`](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-repo-sample/application.properties#L2) 설정 후 컨피그 서버의 [overrides 프로퍼티](https://github.com/godekdls/spring-cloud-config-example/blob/main/config-server-sample/src/main/resources/application.properties#L5)를 재정의하고 싶으면
 
 ```shell
 $ ./mvnw spring-boot:run -Dspring-boot.run.jvmArguments="-Dfriend=hi"
